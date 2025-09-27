@@ -1,0 +1,25 @@
+---
+import Navbar from "@/components/navbar/Navbar.astro";
+import "../styles/global.css";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta
+      name="description"
+      content="A frontend developer with a passion for building user friendly and efficient web applications."
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Youssef Khaled</title>
+  </head>
+  <body>
+    <main class="max-w-2xl mx-auto px-4">
+      <Navbar />
+      <slot />
+    </main>
+  </body>
+</html>
