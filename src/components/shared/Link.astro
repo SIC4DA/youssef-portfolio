@@ -6,7 +6,9 @@ const { href, isActive = false } = Astro.props;
   href={href}
   class={` ${isActive ? "text-foreground" : "text-foreground-muted"} hover:text-foreground group relative`}
 >
-  <slot class="relative z-10" />
+  <span class="relative z-10">
+    <slot />
+  </span>
   {
     !isActive && (
       <span class="absolute w-0 h-1/3 bottom-1 left-0 bg-primary/50 group-hover:w-full duration-200" />
