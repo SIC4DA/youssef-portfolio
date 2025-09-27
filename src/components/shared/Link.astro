@@ -1,0 +1,15 @@
+---
+const { href, isActive = false, isItalic = true } = Astro.props;
+---
+
+<a
+  href={href}
+  class={` ${isItalic ? "italic" : ""} ${isActive ? "text-foreground" : "text-foreground-muted"} hover:text-foreground group relative`}
+>
+  <slot class="relative z-10" />
+  {
+    !isActive && (
+      <span class="absolute w-0 h-1/3 bottom-1 left-0 bg-primary/50 group-hover:w-full duration-200" />
+    )
+  }
+</a>
