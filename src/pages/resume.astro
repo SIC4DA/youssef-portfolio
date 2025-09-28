@@ -1,0 +1,42 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+---
+
+<BaseLayout>
+  <h1 class="text-lg font-bold font-inter mb-4">Resume</h1>
+  <p class="mb-4">
+    Here is a quick preview of my resume, for a more clear look you can also
+    download it from <a
+      href="/Youssef_Khaled_Resume.pdf"
+      download
+      class="underline italic text-sm hover:no-underline font-bold hover:text-primary duration-300"
+      >here</a
+    >.
+  </p>
+
+  <embed
+    src="/Youssef_Khaled_Resume.pdf#toolbar=0&navpanes=0&scrollbar=0"
+    type="application/pdf"
+    width="100%"
+    style="border: none; box-shadow: none; outline: none;"
+    height="810px"
+    title="Youssef Khaled Resume"
+  />
+</BaseLayout>
+
+<!-- <script>
+  if (typeof window !== "undefined") {
+    (" ");
+  }
+  {
+    // Automatically trigger download of /resume.pdf when the page loads
+    window.addEventListener("DOMContentLoaded", () => {
+      const link = document.createElement("a");
+      link.href = "/Youssef_Khaled_Resume.pdf";
+      link.download = "Youssef_Khaled_Resume.pdf";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    });
+  }
+</script> -->
