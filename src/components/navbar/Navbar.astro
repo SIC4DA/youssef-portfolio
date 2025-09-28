@@ -1,9 +1,11 @@
 ---
 import Link from "@/components/shared/Link.astro";
+
+const currentPath = Astro.url.pathname;
 ---
 
 <nav class="flex gap-4 justify-end mb-16 italic">
-  <Link href="/">/about</Link>
-  <Link href="/">/projects</Link>
-  <Link href="/resume">/resume</Link>
+  <Link href="/" isActive={currentPath === "/"}>/about</Link>
+  <Link href="/projects" isActive={currentPath === "/projects"}>/projects</Link>
+  <Link href="/resume" isActive={currentPath === "/resume"}>/resume</Link>
 </nav>
