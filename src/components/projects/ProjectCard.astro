@@ -1,0 +1,59 @@
+---
+import { Image } from "astro:assets";
+import Arrow from "@/assets/icons/Arrow.astro";
+
+type Project = {
+  name: string;
+  description: string;
+  path: string;
+  url: string;
+  tags: string[];
+  image: string;
+};
+
+const {
+  project,
+}: {
+  project: Project;
+} = Astro.props as {
+  project: Project;
+};
+
+const { name, description, path, tags, image } = project;
+---
+
+<a href={path}>
+  <div class="rounded-lg overflow-hidden group">
+    <div
+      class="w-full max-h-[430px] rounded-xl overflow-hidden flex items-center justify-center"
+    >
+      <Image
+        src={`/${image}`}
+        alt={name}
+        width={640}
+        height={425}
+        class="w-full object-cover rounded-xl group-hover:scale-105 duration-300"
+      />
+    </div>
+    <div class="py-4 px-3">
+      <div class="flex items-center gap-2">
+        <h2
+          class="text-lg font-semibold font-inter mb-1 group-hover:text-primary transition-all duration-200"
+        >
+          {name}
+        </h2>
+        <Arrow />
+      </div>
+      <p class="mb-4">{description}</p>
+      <div class="flex gap-2">
+        {
+          tags.map((tag) => (
+            <span class="text-sm text-primary bg-primary/10 px-2.5 py-0.5 rounded-full">
+              {tag}
+            </span>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</a>
