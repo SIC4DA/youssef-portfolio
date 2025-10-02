@@ -2,7 +2,7 @@
   {
     "key": "frontline",
     "name": "Frontline",
-    "description": "A frontend developer with a passion for building user friendly and efficient web applications.",
+    "description": "Frontline is a sales deal management platform that replaces long, error prone forms with an AI enhanced conversational interface. It helps sales reps capture, share, and manage deal data faster and more reliably, turning a redundant form workflow into an fast, enjoyable conversational experience.",
     "tags": ["Next.js", "Tailwind", "TypeScript", "Vercel AI SDK"],
     "image": "frontline.webp",
     "path": "/projects/frontline",
@@ -13,7 +13,7 @@
   {
     "key": "defendops",
     "name": "DefendOps",
-    "description": "A frontend developer with a passion for building user friendly and efficient web applications.",
+    "description": "DefendOps is a vulnerability management and security assessment platform that helps companies discover, monitor, and remediate vulnerabilities across public and internal assets. The product centralizes scan results, integrations, and remediation workflows so security teams can act faster and more confidently.",
     "tags": ["React.js", "Tailwind", "Vite"],
     "image": "defendops.webp",
     "path": "/projects/defendops",
