@@ -1,0 +1,17 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import projects from "@/data/projects.json";
+import ProjectCard from "@/components/projects/ProjectCard.astro";
+---
+
+<BaseLayout>
+  <header class="mb-6">
+    <h1 class="text-2xl font-semibold font-inter">Projects</h1>
+    <p class="mb-4 italic text-foreground-muted">
+      These are the latest things I've worked on.
+    </p>
+  </header>
+  <div class="flex flex-col gap-10">
+    {projects.map((project) => <ProjectCard project={project} />)}
+  </div>
+</BaseLayout>
