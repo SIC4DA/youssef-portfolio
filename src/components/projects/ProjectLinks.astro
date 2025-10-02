@@ -1,0 +1,46 @@
+---
+import Globe from "@/assets/icons/Globe.astro";
+import Github from "@/assets/icons/Github.astro";
+import Play from "@/assets/icons/Play.astro";
+
+const { liveUrl, repository, preview } = Astro.props;
+---
+
+<div class="flex items-center gap-2 flex-wrap text-sm">
+  {
+    liveUrl && (
+      <a
+        href={liveUrl}
+        target="_blank"
+        class="transition-colors duration-200 flex items-center gap-1 text-primary bg-primary/10 px-2.5 py-0.5 rounded-full"
+      >
+        <Globe />
+        <span>Live</span>
+      </a>
+    )
+  }
+  {
+    repository && (
+      <a
+        href={repository}
+        target="_blank"
+        class="transition-colors duration-200 flex items-center gap-1 text-primary bg-primary/10 px-2.5 py-0.5 rounded-full"
+      >
+        <Github />
+        <span>Repository</span>
+      </a>
+    )
+  }
+  {
+    preview && (
+      <a
+        href={preview}
+        target="_blank"
+        class="transition-colors duration-200 flex items-center gap-1 text-primary bg-primary/10 px-2.5 py-0.5 rounded-full"
+      >
+        <Play />
+        <span>Preview</span>
+      </a>
+    )
+  }
+</div>
