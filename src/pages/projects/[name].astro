@@ -1,0 +1,91 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { Image } from "astro:assets";
+import projects from "@/data/projects.json";
+import NotFound from "../404.astro";
+import Back from "@/assets/icons/Back.astro";
+import ProjectLinks from "@/components/projects/ProjectLinks.astro";
+
+export function getStaticPaths() {
+  return projects.map((project) => ({
+    params: { name: project.key },
+    props: { project },
+  }));
+}
+
+const { project } = Astro.props;
+
+if (!project) {
+  return new Response(await NotFound(), { status: 404 });
+}
+
+const { name, image, repository, liveUrl, preview, key } = project;
+
+const Content = await import(`../../data/${key}.md`).then(
+  (module) => module.default
+);
+
+console.log(Content);
+---
+
+<BaseLayout>
+  <div class="mb-8">
+    <a
+      href="/projects"
+      class="text-foreground-muted hover:text-primary transition-colors duration-200 flex items-center gap-2 mb-6"
+    >
+      <Back />
+      Back to Projects
+    </a>
+
+    <div class="flex items-center justify-between gap-2 flex-wrap mb-6">
+      <h1 class="text-xl font-bold font-inter">{name}</h1>
+      <ProjectLinks
+        liveUrl={liveUrl}
+        repository={repository}
+        preview={preview}
+      />
+    </div>
+
+    <div class="rounded-xl overflow-hidden mb-8">
+      <Image
+        src={`/${image}`}
+        alt={name}
+        width={800}
+        height={500}
+        class="w-full object-cover"
+      />
+    </div>
+
+    <div class="markdown">
+      <Content />
+    </div>
+  </div>
+</BaseLayout>
+
+<style is:global>
+  .markdown h2 {
+    font-family: "inter-variable", sans-serif;
+    font-size: 1.125rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 0.25rem;
+  }
+  .markdown p {
+    margin-bottom: 1.5rem;
+  }
+  .markdown strong {
+    font-size: 15px;
+  }
+  .markdown ul {
+    padding-inline: 1.25rem;
+    list-style: outside;
+  }
+  .markdown ul li {
+    margin-bottom: 0.5rem;
+  }
+  .markdown a {
+    color: var(--primary);
+    text-decoration: underline;
+  }
+</style>
