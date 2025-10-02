@@ -1,0 +1,36 @@
+[
+  {
+    "key": "frontline",
+    "name": "Frontline",
+    "description": "A frontend developer with a passion for building user friendly and efficient web applications.",
+    "tags": ["Next.js", "Tailwind", "TypeScript", "Vercel AI SDK"],
+    "image": "frontline.webp",
+    "path": "/projects/frontline",
+    "repository": null,
+    "liveUrl": "https://frontline-app.vercel.app/",
+    "preview": null
+  },
+  {
+    "key": "defendops",
+    "name": "DefendOps",
+    "description": "A frontend developer with a passion for building user friendly and efficient web applications.",
+    "tags": ["React.js", "Tailwind", "Vite"],
+    "image": "defendops.webp",
+    "path": "/projects/defendops",
+    "repository": null,
+    "liveUrl": null,
+    "preview": null
+  },
+  {
+    "key": "upperleap",
+    "name": "UpperLeap: A Gaming Boosting Platform",
+    "description": "UpperLeap is a gaming boosting platform designed to connect players with professional boosters. The platform streamlines the process of ordering, tracking, and completing boosting services, ensuring a seamless experience for users.",
+    "tags": ["Next.js", "Tailwind", "TypeScript"],
+    "image": "upperleap.webp",
+    "path": "/projects/upperleap",
+    "repository": null,
+    "liveUrl": null,
+    "preview": "https://youtu.be/349P_hp3QZM?si=g4vfQhajiPDv9lt_",
+    "content": "# UpperLeap: A Gaming Boosting Platform **Tech Stack:** Next.js, Tailwind CSS, Zustand, SignalR --- ## Overview UpperLeap is a cutting-edge gaming boosting platform designed to connect players with professional boosters. The platform streamlines the process of ordering, tracking, and completing boosting services, ensuring a seamless experience for users. --- ## My Role As the **Front-End Developer**, I was responsible for building a responsive and user-friendly interface, ensuring seamless integration of design and functionality. --- ## Key Features I Developed - **Dynamic Order Tracking:** Implemented real-time order status updates using **SignalR**, ensuring users can track their progress live. - **Customizable Orders:** Built interactive forms for selecting game ranks, divisions, and additional options with responsive validation. - **User Dashboard:** Designed and developed a personalized dashboard for users to view their order history, progress, and notifications. --- ## Challenges & Solutions - **Challenge:** Managing dynamic data updates without reloading the page. **Solution:** Utilized Zustand for state management, ensuring a smooth and efficient user experience. - **Challenge:** Designing a clean and intuitive UI for complex order workflows. **Solution:** Collaborated closely with the design team to implement a streamlined interface, emphasizing usability. --- ## Impact - Achieved a **30% increase in user engagement** by implementing a sleek, mobile-friendly design. - Boosted platform credibility with faster load times and a visually appealing interface."
+  }
+]
