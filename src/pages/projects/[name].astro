@@ -28,7 +28,10 @@ const Content = await import(`../../data/${key}.md`).then(
 console.log(Content);
 ---
 
-<BaseLayout>
+<BaseLayout
+  title={`${name} | Youssef Khaled`}
+  description={project.description}
+>
   <div class="mb-8">
     <a
       href="/projects"

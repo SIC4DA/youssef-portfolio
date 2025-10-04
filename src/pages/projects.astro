@@ -4,7 +4,10 @@ import projects from "@/data/projects.json";
 import ProjectCard from "@/components/projects/ProjectCard.astro";
 ---
 
-<BaseLayout>
+<BaseLayout
+  title="Projects | Youssef Khaled"
+  description="The latest projects I've worked on."
+>
   <header class="mb-6">
     <h1 class="text-2xl font-semibold font-inter">Projects</h1>
     <p class="mb-4 italic text-foreground-muted">
@@ -12,6 +15,10 @@ import ProjectCard from "@/components/projects/ProjectCard.astro";
     </p>
   </header>
   <div class="flex flex-col gap-10">
-    {projects.map((project) => <ProjectCard project={project} />)}
+    {
+      projects.map((project, index) => (
+        <ProjectCard project={project} index={index} />
+      ))
+    }
   </div>
 </BaseLayout>
