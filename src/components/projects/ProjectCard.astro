@@ -52,10 +52,10 @@ const { name, description, path, tags, image } = project;
         <Arrow />
       </div>
       <p class="mb-4 line-clamp-2" title={description}>{description}</p>
-      <div class="flex gap-2">
+      <div class="flex gap-2 flex-wrap">
         {
           tags.map((tag) => (
-            <span class="text-sm text-primary bg-primary/10 px-2.5 py-0.5 rounded-full">
+            <span class="text-sm text-primary bg-primary/10 px-2.5 py-0.5 rounded-full whitespace-nowrap">
               {tag}
             </span>
           ))
