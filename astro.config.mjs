@@ -10,5 +10,9 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
   site: "https://youssef-khaled.netlify.app",
-  integrations: [sitemap()],
+  integrations: [
+    sitemap({
+      changefreq: "weekly",
+    }),
+  ],
 });
