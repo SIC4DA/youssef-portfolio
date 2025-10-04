@@ -48,6 +48,7 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
       property="og:description"
       content={description || defaultDescription}
     />
+    <meta property="og:image" content="/og-image.png" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -56,6 +57,7 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
       name="twitter:description"
       content={description || defaultDescription}
     />
+    <meta name="twitter:image" content="/og-image.png" />
   </head>
   <body>
     <main class="max-w-2xl mx-auto px-4">
