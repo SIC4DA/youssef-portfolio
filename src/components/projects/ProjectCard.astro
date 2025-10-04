@@ -13,17 +13,23 @@ type Project = {
 
 const {
   project,
+  index,
 }: {
   project: Project;
+  index: number;
 } = Astro.props as {
   project: Project;
+  index: number;
 };
 
 const { name, description, path, tags, image } = project;
 ---
 
 <a href={path}>
-  <div class="rounded-lg overflow-hidden group">
+  <div
+    class="rounded-lg overflow-hidden group fade-in"
+    style={`animation-delay: ${index * 0.2}s;`}
+  >
     <div
       class="w-full max-h-[430px] rounded-xl overflow-hidden flex items-center justify-center"
     >
@@ -32,6 +38,7 @@ const { name, description, path, tags, image } = project;
         alt={name}
         width={640}
         height={425}
+        loading={index <= 1 ? "eager" : "lazy"}
         class="w-full object-cover rounded-xl group-hover:scale-105 duration-300"
       />
     </div>
