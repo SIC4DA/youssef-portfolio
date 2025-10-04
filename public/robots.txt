@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://youssef-khaled.netlify.app/sitemap-index.xml
