@@ -24,8 +24,6 @@ const { name, image, repository, liveUrl, preview, key } = project;
 const Content = await import(`../../data/${key}.md`).then(
   (module) => module.default
 );
-
-console.log(Content);
 ---
 
 <BaseLayout
