@@ -1,7 +1,7 @@
 [
   {
     "key": "frontline",
-    "name": "Frontline",
+    "name": "Frontline: Sales Deal Management Platform",
     "description": "Frontline is a sales deal management platform that replaces long, error prone forms with an AI enhanced conversational interface. It helps sales reps capture, share, and manage deal data faster and more reliably, turning a redundant form workflow into an fast, enjoyable conversational experience.",
     "tags": ["Next.js", "Tailwind", "TypeScript", "Vercel AI SDK"],
     "image": "frontline.webp",
@@ -12,7 +12,7 @@
   },
   {
     "key": "defendops",
-    "name": "DefendOps",
+    "name": "DefendOps: Security Assessment Platform",
     "description": "DefendOps is a vulnerability management and security assessment platform that helps companies discover, monitor, and remediate vulnerabilities across public and internal assets. The product centralizes scan results, integrations, and remediation workflows so security teams can act faster and more confidently.",
     "tags": ["React.js", "Tailwind", "Vite"],
     "image": "defendops.webp",
@@ -23,7 +23,7 @@
   },
   {
     "key": "upperleap",
-    "name": "UpperLeap: A Gaming Boosting Platform",
+    "name": "UpperLeap: Gaming Boosting Platform",
     "description": "UpperLeap is a gaming boosting platform designed to connect players with professional boosters. The platform streamlines the process of ordering, tracking, and completing boosting services, ensuring a seamless experience for users.",
     "tags": ["Next.js", "Tailwind", "TypeScript"],
     "image": "upperleap.webp",
