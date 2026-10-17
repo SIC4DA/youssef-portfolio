@@ -6,7 +6,7 @@
     "tags": ["Next.js", "Tailwind", "TypeScript", "Vercel AI SDK"],
     "image": "frontline.webp",
     "path": "/projects/frontline",
-    "repository": null,
+    "repository": "https://github.com/SIC4DA/Frontline.Platform.v2",
     "liveUrl": "https://frontline-app.vercel.app/",
     "preview": null
   },
